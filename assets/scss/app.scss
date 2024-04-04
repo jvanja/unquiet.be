@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Questrial&display=swap');
+
+// vars
+@import 'variables';
+
+// components
+// @import 'animations/transitions';
+
+.questrial {
+  font-family: "Questrial", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  letter-spacing: -5px;
+}
+
+body,
+html {
+  font-family: "Open Sans", sans-serif;
+  // background-color: var(--c-bg);
+  color: var(--c-text);
+}
