@@ -1,6 +1,14 @@
 <script lang="ts" setup>
+import type { QueryBuilderParams } from "@nuxt/content/dist/runtime/types";
+
 const { awesome } = useAppConfig();
 definePageMeta({ layout: "page" });
+
+const query: QueryBuilderParams = {
+  path: "/project",
+  where: [{ featured: "true" }],
+  limit: 4,
+};
 </script>
 
 <template>
@@ -11,34 +19,17 @@ definePageMeta({ layout: "page" });
 
     <section>
       <div class="grid grid-cols-4 gap-4">
-        <NuxtLink
-          to="/project/1"
-          :title="'Project Name'"
-          class="aspect-square bg-slate-200"
-        >
-          Project 1
-        </NuxtLink>
-        <NuxtLink
-          to="/project/2"
-          :title="'Project Name'"
-          class="aspect-square bg-slate-300"
-        >
-          Project 2
-        </NuxtLink>
-        <NuxtLink
-          to="/project/3"
-          :title="'Project Name'"
-          class="aspect-square bg-slate-400"
-        >
-          Project 3
-        </NuxtLink>
-        <NuxtLink
-          to="/project/4"
-          :title="'Project Name'"
-          class="aspect-square bg-slate-500"
-        >
-          Project 4
-        </NuxtLink>
+        <ContentList v-slot="{ list }" :query="query">
+          <NuxtLink
+            v-for="project in list"
+            :key="project.path"
+            :to="'project/' + project.path"
+            :title="project.title"
+            class="aspect-square bg-slate-200"
+          >
+            {{ project.title }}
+          </NuxtLink>
+        </ContentList>
       </div>
     </section>
     <section class="my-12">
