@@ -15,6 +15,9 @@ export default defineNuxtConfig({
     "@nuxt/image",
   ],
 
+  app: {
+    pageTransition: { name: "page", mode: "out-in" },
+  },
   css: [
     resolve("./assets/scss/_variables.scss"),
     resolve("./assets/scss/app.scss"),

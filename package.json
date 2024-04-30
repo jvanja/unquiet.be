@@ -16,6 +16,7 @@
     "@nuxt/image": "^1.5.0",
     "@nuxtjs/color-mode": "^3.3.2",
     "@pinia/nuxt": "^0.5.1",
+    "@studio-freight/lenis": "^1.0.42",
     "gsap": "^3.12.5",
     "nuxt": "^3.10.1",
     "nuxt-headlessui": "^1.1.5",

@@ -1,8 +1,12 @@
 <template>
-  <header class="inset-x-0 top-0 z-50">
-    <h1 id="logo" class="font-bold questrial text-center">unQuiet.be</h1>
+  <header class="flex justify-between items-start mt-10 pt-10 z-10">
+    <NuxtLink to="/">
+      <h1 class="font-bold questrial text-center leading-none">
+        <UnquietLogo />
+      </h1>
+    </NuxtLink>
     <nav
-      class="flex items-center justify-center p-6 lg:px-8"
+      class="flex items-center justify-center px-6 lg:px-8"
       aria-label="Global"
     >
       <div class="flex lg:hidden">
