@@ -13,8 +13,8 @@ onMounted(() => {
       scale: 4,
       ease: "power2.easeinout",
       onComplete: () => {
-        const element = document.querySelector(".loader");
-        element.parentNode.removeChild(element);
+        const element = document.querySelector(".loader") as HTMLElement;
+        element.parentNode?.removeChild(element);
       },
     },
     "+=0.5",
@@ -23,7 +23,7 @@ onMounted(() => {
 </script>
 <template>
   <div class="loader fixed inset-0 z-50">
-    <div class="flex items-center justify-around w-full h-full">
+    <div class="flex h-full w-full items-center justify-around">
       <h1><UnquietLogo /></h1>
     </div>
   </div>

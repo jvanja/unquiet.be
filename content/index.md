@@ -1,5 +1,5 @@
 ---
-title: 'Title of the page'
+title: 'Unquiet index page!'
 description: 'meta description of the page'
 ---
 # Hello Content
